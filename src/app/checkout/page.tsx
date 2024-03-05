@@ -8,7 +8,7 @@ import TextFieldComponent from '../components/textFieldComponent';
 import ButtonComponent from '../components/buttonComponent';
 
 export default function Checkout() { // Removed async keyword from the function declaration
-  initMercadoPago(process.env.NEXT_PUBLIC_ACCESS_TOKEN ?? '', {
+  initMercadoPago(process.env.NEXT_PUBLICKEY ?? '', {
     locale: 'es-AR',
   });
 
