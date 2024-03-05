@@ -17,10 +17,14 @@
         "name": "next"
       }
     ],
+    // "paths": {
+    //   "@/*": ["./src/*"]
+    // },
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
+      "@mercadopago/sdk-react": ["node_modules/@mercadopago/sdk-react/dist/index.d.ts"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/pages/api/mercadoPago.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
