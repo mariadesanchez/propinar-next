@@ -1,24 +1,24 @@
-// TextFieldComponent.tsx
-import TextField from '@mui/material/TextField';
+import React, { ChangeEvent } from 'react';
 
 interface TextFieldProps {
   value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   error: string;
+  label: string;
 }
 
-const TextFieldComponent: React.FC<TextFieldProps> = ({ value, onChange, error }) => (
-  <TextField
-    type="number"
-    label="Tu Propina"
-    variant="outlined"
-    value={value}
-    onChange={onChange}
-    style={{ marginBottom: '10px' }}
-    required
-    error={error.length > 0}
-    helperText={error}
-  />
+const TextFieldComponent: React.FC<TextFieldProps> = ({ value, onChange, error, label }) => (
+  <div style={{ marginBottom: '10px' }}>
+    <label>{label}</label>
+    <input
+      type="number"
+      value={value}
+      onChange={onChange}
+      required
+      style={{ border: error.length > 0 ? '1px solid red' : '1px solid black' }}
+    />
+    {error && <span style={{ color: 'red' }}>{error}</span>}
+  </div>
 );
 
 export default TextFieldComponent;
