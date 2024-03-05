@@ -1,7 +1,7 @@
 import mercadopago from 'mercadopago';
 
 mercadopago.configure({
-    access_token: process.env.ACCESS_TOKEN,
+    access_token: process.envNEXT_PUBLIC_MERCADO_PAGO_ACCESS_TOKEN,
 });
 
 export default async function handler(req, res) {
