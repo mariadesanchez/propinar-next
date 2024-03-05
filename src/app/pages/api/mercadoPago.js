@@ -12,8 +12,9 @@ export default async function handler(req, res) {
             const preference = {
                 items,
                 back_urls: {
-                    success: 'https://propinare.vercel.app/Checkout',
-                    failure: 'https://propinare.vercel.app/Checkout',
+                    success: 'propinar-next.vercel.app',
+
+                    failure: 'propinar-next.vercel.app',
                     pending: '',
                 },
                 auto_return: 'approved',
